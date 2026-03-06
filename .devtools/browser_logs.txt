@@ -43241,3 +43241,526 @@ TypeError: comp.triggerUpdate is not a function
     at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7500:49
     at AsyncStackTaggingZoneSpec.onInvokeTask (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7500:30)
     at _ZoneDelegate.invokeTask (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:360:54)  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:07:35.676Z] [NET  ] XHR POST /rewardsapp/reportActivity?IG=B5891A1080B24C0998CDA9C51FE10054&IID=SERP.5063&qs=HS&pq=chat&sk=CSYN1&sc=13-4&q=chat+gpt&cvid=bc06c2b6b844406d9a2e2cdc7515ccd7&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQRRhBMgYIBxBFGEEyBggIEEUYQdIBCDE4MTlqMGo5qAIDsAIB&FORM=ANAB01&PC=U531&ntref=1&ajaxreq=1 → 502   (https://www.bing.com/search?qs=HS&pq=chat&sk=CSYN1&sc=13-4&q=chat+gpt&cvid=bc06c2b6b844406d9a2e2cdc7515ccd7&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQRRhBMgYIBxBFGEEyBggIEEUYQdIBCDE4MTlqMGo5qAIDsAIB&FORM=ANAB01&PC=U531&ntref=1)
+          Network: POST /rewardsapp/reportActivity?IG=B5891A1080B24C0998CDA9C51FE10054&IID=SERP.5063&qs=HS&pq=chat&sk=CSYN1&sc=13-4&q=chat+gpt&cvid=bc06c2b6b844406d9a2e2cdc7515ccd7&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQRRhBMgYIBxBFGEEyBggIEEUYQdIBCDE4MTlqMGo5qAIDsAIB&FORM=ANAB01&PC=U531&ntref=1&ajaxreq=1 → 502 
+[2026-03-06T21:07:40.591Z] [ERROR] Script error.  (https://www.bing.com/search?qs=HS&pq=git&sk=CSYN1UT2SS3CT4MT1&sc=21-3&q=git+and+portfolio+image&cvid=ae975ae9042149a69fc193e29664d971&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARAAGEAyBggCEAAYQDIGCAMQLhhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAuGEAyBggIEEUYQdIBCDMyNTVqMGo5qAIIsAIB&FORM=ANAB01&PC=U531)
+[2026-03-06T21:07:53.426Z] [LOG  ] %c%s color: red; background: yellow; font-size: 24px; WARNING!  (https://accounts.google.com/v3/signin/accountchooser?client_id=1078992815106-brpsupgvhheqg35tupphbh0qk9c32nq8.apps.googleusercontent.com&code_challenge=BaAyyOrhneD7eYKbQtOUBGNnF92ThMOpRimdN9EqwkU&code_challenge_method=S256&nonce=947a75f1f5001378174c8ed7b6d57eb9&prompt=select_account&redirect_uri=https%3A%2F%2Fgithub.com%2Fsessions%2Fsocial%2Fgoogle%2Fcallback&response_type=code&scope=openid+email+profile&state=77bc188ab74f7393a4d6fd4c51853f7f&dsh=S2084030142%3A1772831271952757&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAPXXA-uBQ9zwPtC0Bd054QhrlVy5lBmmgw55VC2OWVSTDhfu9TAYCLQQV8t7EKFaUiHJZsmuQtjwjhiIQs1L5goHoHjX2Ua8TCoMqDQQSMWcVeFODz6xHFproWMBvqFumfHhSn2VKqeiSU5KC7kmUn-2w-MjYFyX2Z7O3DKwRIEoq1t7lAD5U8eavYpe_l3S1pRpmahyG_Mp0kFwLjJZJn-o_4KoctVphR4TNn2z8NyZP5d01Bjc4-_LsdbPHdBXioF_zZHT63YRTfXaU9Zs5Rm1cwJVkdZJXqNsnL_oewFw28cjfM6mn0EsnlYZLGblrN_KHTWUY3BZcPQD9pCGmQy4Ox1bJ-FxaNWiwXVmD8LiDgri1sHlYSDb_nCEDWGvH3W0QbMxP73ExJ1MCPCXn9NhUscC6ZVrMO6cyudTXj_7IQjVuf5IqxKTSqDQLMfpPysXzsszy38uXZnd26d0uEiJkk9XQ%26flowName%3DGeneralOAuthFlow%26as%3DS2084030142%253A1772831271952757%26client_id%3D1078992815106-brpsupgvhheqg35tupphbh0qk9c32nq8.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fgithub.com)
+[2026-03-06T21:07:53.427Z] [LOG  ] %c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand.  (https://accounts.google.com/v3/signin/accountchooser?client_id=1078992815106-brpsupgvhheqg35tupphbh0qk9c32nq8.apps.googleusercontent.com&code_challenge=BaAyyOrhneD7eYKbQtOUBGNnF92ThMOpRimdN9EqwkU&code_challenge_method=S256&nonce=947a75f1f5001378174c8ed7b6d57eb9&prompt=select_account&redirect_uri=https%3A%2F%2Fgithub.com%2Fsessions%2Fsocial%2Fgoogle%2Fcallback&response_type=code&scope=openid+email+profile&state=77bc188ab74f7393a4d6fd4c51853f7f&dsh=S2084030142%3A1772831271952757&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAPXXA-uBQ9zwPtC0Bd054QhrlVy5lBmmgw55VC2OWVSTDhfu9TAYCLQQV8t7EKFaUiHJZsmuQtjwjhiIQs1L5goHoHjX2Ua8TCoMqDQQSMWcVeFODz6xHFproWMBvqFumfHhSn2VKqeiSU5KC7kmUn-2w-MjYFyX2Z7O3DKwRIEoq1t7lAD5U8eavYpe_l3S1pRpmahyG_Mp0kFwLjJZJn-o_4KoctVphR4TNn2z8NyZP5d01Bjc4-_LsdbPHdBXioF_zZHT63YRTfXaU9Zs5Rm1cwJVkdZJXqNsnL_oewFw28cjfM6mn0EsnlYZLGblrN_KHTWUY3BZcPQD9pCGmQy4Ox1bJ-FxaNWiwXVmD8LiDgri1sHlYSDb_nCEDWGvH3W0QbMxP73ExJ1MCPCXn9NhUscC6ZVrMO6cyudTXj_7IQjVuf5IqxKTSqDQLMfpPysXzsszy38uXZnd26d0uEiJkk9XQ%26flowName%3DGeneralOAuthFlow%26as%3DS2084030142%253A1772831271952757%26client_id%3D1078992815106-brpsupgvhheqg35tupphbh0qk9c32nq8.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fgithub.com)
+[2026-03-06T21:14:09.655Z] [DEBUG] [vite] connecting...  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:09.706Z] [DEBUG] [vite] connected.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:10.161Z] [LOG  ] Angular is running in development mode.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:11.690Z] [NET  ] XHR POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400   (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          Network: POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400 
+[2026-03-06T21:14:31.617Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:14:31.621Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:31.623Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:14:31.893Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:14:39.260Z] [DEBUG] [vite] connecting...  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:39.307Z] [DEBUG] [vite] connected.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:39.767Z] [LOG  ] Angular is running in development mode.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:40.061Z] [NET  ] XHR POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400   (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          Network: POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400 
+[2026-03-06T21:14:50.119Z] [DEBUG] [vite] connecting...  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:50.132Z] [DEBUG] [vite] connected.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:50.929Z] [LOG  ] Angular is running in development mode.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:14:51.232Z] [NET  ] XHR POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400   (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          Network: POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400 
+[2026-03-06T21:15:10.930Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:15:10.936Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:15:13.684Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:15:18.480Z] [DEBUG] [vite] connected.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:15:18.878Z] [LOG  ] Angular is running in development mode.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:15:19.292Z] [NET  ] XHR POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400   (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          Network: POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400 
+[2026-03-06T21:15:39.302Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:15:39.304Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:15:40.313Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:16:01.370Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:16:01.635Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:16:22.425Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:18:14.495Z] [DEBUG] [vite] connected.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:18:14.798Z] [LOG  ] Angular is running in development mode.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:18:15.169Z] [NET  ] XHR POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400   (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          Network: POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400 
+[2026-03-06T21:18:36.194Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:18:36.198Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:18:36.210Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:18:36.459Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:18:57.248Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:18:57.494Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:19:09.381Z] [DEBUG] [vite] connecting...  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:19:09.436Z] [DEBUG] [vite] connected.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:19:09.788Z] [LOG  ] Angular is running in development mode.  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:19:10.106Z] [NET  ] XHR POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400   (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          Network: POST https://auth26-gnspd.sandbox.gouv.tg/realms/voyage/protocol/openid-connect/token → 400 
+[2026-03-06T21:19:18.332Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:19:18.335Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+[2026-03-06T21:19:31.255Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/procedure-voyage-form/69a2011a0830afadc372e554)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:19:52.293Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/consulter-demande)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:19:52.573Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr → Failed to fetch  (http://localhost:4200/consulter-demande)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr → 0 Failed to fetch
+[2026-03-06T21:19:52.576Z] [ERROR] GetFagFacade error {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/consulter-demande)
+[2026-03-06T21:19:55.328Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → Failed to fetch  (http://localhost:4200/consulter-demande)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → 0 Failed to fetch
+[2026-03-06T21:20:04.596Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr → Failed to fetch  (http://localhost:4200/)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr → 0 Failed to fetch
+[2026-03-06T21:20:04.599Z] [ERROR] GetFagFacade error {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/)
+[2026-03-06T21:20:04.993Z] [WARN ] You must provide an AppConfig within your application!  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.053Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.057Z] [LOG  ] [VISA] Vérification existence _showVisaModal: undefined  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.057Z] [LOG  ] [VISA] _showVisaModal absent, création en cours...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.057Z] [LOG  ] [VISA] Injection du style CSS...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.058Z] [LOG  ] [VISA] Style CSS injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.058Z] [LOG  ] [VISA] Injection du HTML du modal...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.058Z] [LOG  ] [VISA] HTML du modal injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.059Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.059Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.058Z] [LOG  ] [VISA] _showVisaModal défini avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.058Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.059Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.059Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.171Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.173Z] [LOG  ] [VISA] Vérification existence _showVisaModal: function  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.174Z] [LOG  ] [VISA] _showVisaModal déjà défini, on réutilise l'existant  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.174Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.174Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.174Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.174Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:05.174Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:07.058Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:07.180Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:10.080Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:20:13.349Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → 0 Failed to fetch
+[2026-03-06T21:20:16.355Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr → 0 Failed to fetch
+[2026-03-06T21:20:16.360Z] [ERROR] GetFagFacade error {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/cms/faqs?lang=fr: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:20:23.981Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a2011a0830afadc372e554 → 0 Failed to fetch
+[2026-03-06T21:20:31.127Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → 0 Failed to fetch
+[2026-03-06T21:20:34.385Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → 0 Failed to fetch
+[2026-03-06T21:20:37.940Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 

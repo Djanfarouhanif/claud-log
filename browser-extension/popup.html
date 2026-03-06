@@ -2,82 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claude Log Bridge</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      width: 260px;
+      width: 460px;
       padding: 16px;
       background: #1e1e2e;
       color: #cdd6f4;
     }
-    h1 { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: #89b4fa; }
+    h1 { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: #89b4fa; }
+
+    /* Current site card */
+    .site-card {
+      background: #313244;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .site-card .label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6c7086;
+      margin-bottom: 4px;
+    }
+    .site-card .host {
+      font-size: 13px;
+      font-weight: 600;
+      color: #cdd6f4;
+      word-break: break-all;
+    }
+
+    /* Big action button */
+    .action-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .15s;
+      margin-bottom: 8px;
+    }
+    .action-btn.add    { background: #a6e3a1; color: #1e1e2e; }
+    .action-btn.add:hover { background: #94d4a0; }
+    .action-btn.remove { background: #f38ba8; color: #1e1e2e; }
+    .action-btn.remove:hover { background: #e07a97; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid #313244;
+      margin: 12px 0;
+    }
+
+    /* Toggle row */
     .row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 10px;
     }
-    label { font-size: 13px; }
-    .toggle {
-      position: relative; width: 36px; height: 20px;
-    }
+    .row label { font-size: 13px; }
+    .toggle { position: relative; width: 36px; height: 20px; }
     .toggle input { opacity: 0; width: 0; height: 0; }
     .slider {
       position: absolute; cursor: pointer;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: #45475a; border-radius: 20px;
-      transition: .2s;
+      background: #45475a; border-radius: 20px; transition: .2s;
     }
     .slider:before {
       position: absolute; content: "";
       height: 14px; width: 14px;
       left: 3px; bottom: 3px;
-      background: white; border-radius: 50%;
-      transition: .2s;
+      background: white; border-radius: 50%; transition: .2s;
     }
     input:checked + .slider { background: #89b4fa; }
     input:checked + .slider:before { transform: translateX(16px); }
 
-    .status {
-      font-size: 11px;
-      padding: 6px 10px;
-      border-radius: 6px;
+    /* Saved sites list */
+    .section-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6c7086;
+      margin-bottom: 6px;
+    }
+    .site-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .site-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       background: #313244;
-      color: #a6adc8;
-      margin-top: 8px;
-    }
-    .status.ok { color: #a6e3a1; }
-    .status.err { color: #f38ba8; }
-
-    button {
-      width: 100%;
-      margin-top: 10px;
-      padding: 7px;
-      border: none;
       border-radius: 6px;
-      background: #89b4fa;
-      color: #1e1e2e;
+      padding: 5px 8px;
       font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
     }
-    button:hover { background: #74c7ec; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #a6e3a1; flex-shrink: 0;
+    }
+    .dot.off { background: #45475a; }
+    .site-item span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rm { background: none; border: none; color: #f38ba8; cursor: pointer; font-size: 15px; padding: 0; }
+
+    .empty { font-size: 11px; color: #585b70; text-align: center; padding: 6px 0; }
+
+    /* Status */
+    .status {
+      font-size: 11px; padding: 6px 10px;
+      border-radius: 6px; background: #313244;
+      color: #a6adc8; margin-top: 10px;
+    }
+    .status.ok  { color: #a6e3a1; }
+    .status.err { color: #f38ba8; }
   </style>
 </head>
 <body>
   <h1>Claude Log Bridge</h1>
+
+  <!-- Current site -->
+  <div class="site-card">
+    <div class="label">Site actuel</div>
+    <div class="host" id="currentHost">—</div>
+  </div>
+
+  <!-- Main action button (add / remove depending on state) -->
+  <button class="action-btn add" id="actionBtn">＋ Capturer ce site</button>
+
+  <hr class="divider" />
+
+  <!-- Global toggle -->
   <div class="row">
-    <label for="enabledToggle">Capture logs</label>
+    <label>Capture active</label>
     <label class="toggle">
       <input type="checkbox" id="enabledToggle" checked />
       <span class="slider"></span>
     </label>
   </div>
-  <div id="serverStatus" class="status">Checking server…</div>
-  <button id="testBtn">Send test log</button>
+
+  <!-- Saved sites -->
+  <div class="section-label">Sites enregistrés</div>
+  <ul class="site-list" id="siteList"></ul>
+
+  <div id="serverStatus" class="status">Vérification…</div>
 
   <script src="popup.js"></script>
 </body>

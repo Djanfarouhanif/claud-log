@@ -6,7 +6,8 @@
   "permissions": [
     "scripting",
     "activeTab",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "host_permissions": [
     "http://localhost:8765/*",
@@ -35,6 +36,5 @@
   },
   "icons": {
     "16": "icons/icon.png"
-
   }
 }
