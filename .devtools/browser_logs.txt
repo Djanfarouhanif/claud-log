@@ -43764,3 +43764,7 @@ Do not enter or paste code that you do not understand.  (https://accounts.google
           Network: GET http://192.168.200.161:4001/api/v1/services/69a83d814cc3656078ffc845 → 0 Failed to fetch
 [2026-03-06T21:20:37.940Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
           Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:21:07.663Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:21:37.661Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 

@@ -1912,5 +1912,41 @@
       "status": 0,
       "statusText": ""
     }
+  },
+  {
+    "type": "network_error",
+    "message": "XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 ",
+    "stack": null,
+    "source": null,
+    "line": null,
+    "column": null,
+    "timestamp": "2026-03-06T21:21:07.663Z",
+    "url": "http://localhost:4200/visa/ai-je-besoin-de-visa",
+    "tabId": 837695,
+    "tabTitle": "Voyage Togo",
+    "network": {
+      "requestUrl": "https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons",
+      "method": "GET",
+      "status": 0,
+      "statusText": ""
+    }
+  },
+  {
+    "type": "network_error",
+    "message": "XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 ",
+    "stack": null,
+    "source": null,
+    "line": null,
+    "column": null,
+    "timestamp": "2026-03-06T21:21:37.661Z",
+    "url": "http://localhost:4200/visa/ai-je-besoin-de-visa",
+    "tabId": 837695,
+    "tabTitle": "Voyage Togo",
+    "network": {
+      "requestUrl": "https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons",
+      "method": "GET",
+      "status": 0,
+      "statusText": ""
+    }
   }
 ]
