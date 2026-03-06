@@ -1,40 +1,46 @@
 /**
  * Claude Log Bridge - Background Service Worker
+ *
+ * allowedSites vide   → rien n'est capturé
+ * allowedSites rempli → capture uniquement les sites listés
  */
 
 const SERVER_URL = "http://localhost:8765/log";
 
 let settings = {
   enabled: true,
-  filterTypes: [],
-  allowedSites: [],   // empty = capture ALL sites
+  allowedSites: [],
 };
 
-// Load persisted settings on startup
 chrome.storage.local.get(["settings"], (result) => {
   if (result.settings) settings = { ...settings, ...result.settings };
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
+  // Inject injected.js into the page via chrome.scripting (bypasses CSP)
+  if (message.type === "INJECT_SCRIPT") {
+    if (!sender.tab) return;
+    chrome.scripting.executeScript({
+      target: { tabId: sender.tab.id, allFrames: false },
+      files: ["injected.js"],
+      world: "MAIN", // runs in the page's JS context, not the extension's isolated world
+    }).catch((err) => {
+      console.warn("[Claude Log Bridge] executeScript failed:", err.message);
+    });
+    return;
+  }
+
   if (message.type === "LOG_ENTRY") {
     if (!settings.enabled) return;
 
     const payload = message.payload;
+    const pageUrl = payload.url || (sender.tab && sender.tab.url) || "";
 
-    // ── Site filter ──────────────────────────────────────────────────────────
-    if (settings.allowedSites.length > 0) {
-      const pageUrl = payload.url || (sender.tab && sender.tab.url) || "";
-      const allowed = settings.allowedSites.some((site) => pageUrl.includes(site));
-      if (!allowed) return;
-    }
+    // Liste vide = rien n'est autorisé
+    const allowed = settings.allowedSites.some((site) => pageUrl.includes(site));
+    if (!allowed) return;
 
-    // ── Type filter ──────────────────────────────────────────────────────────
-    if (settings.filterTypes.length > 0 && !settings.filterTypes.includes(payload.type)) {
-      return;
-    }
-
-    // ── Enrich with tab info ─────────────────────────────────────────────────
     if (sender.tab) {
       payload.tabId    = sender.tab.id;
       payload.tabTitle = sender.tab.title || "";

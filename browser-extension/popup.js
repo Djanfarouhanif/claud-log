@@ -2,14 +2,14 @@ const toggle      = document.getElementById("enabledToggle");
 const actionBtn   = document.getElementById("actionBtn");
 const currentHost = document.getElementById("currentHost");
 const siteList    = document.getElementById("siteList");
+const allHint     = document.getElementById("allHint");
 const statusEl    = document.getElementById("serverStatus");
 
-let currentSite = null;
+let currentSite  = null;
 let allowedSites = [];
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
-// Get active tab + settings in parallel
 Promise.all([
   new Promise((res) => chrome.tabs.query({ active: true, currentWindow: true }, res)),
   new Promise((res) => chrome.runtime.sendMessage({ type: "GET_SETTINGS" }, res)),
@@ -25,7 +25,6 @@ Promise.all([
   render();
 });
 
-// Server health
 fetch("http://localhost:8765/health")
   .then((r) => {
     statusEl.textContent = r.ok ? "Serveur connecté" : "Erreur serveur";
@@ -39,10 +38,8 @@ fetch("http://localhost:8765/health")
 // ─── Render ───────────────────────────────────────────────────────────────────
 
 function render() {
-  // Current site display
   currentHost.textContent = currentSite || "Page système (non capturable)";
 
-  // Action button
   if (!currentSite) {
     actionBtn.textContent = "Non capturable";
     actionBtn.className = "action-btn";
@@ -52,28 +49,31 @@ function render() {
     actionBtn.className = "action-btn remove";
     actionBtn.disabled = false;
   } else {
-    actionBtn.textContent = "＋ Capturer ce site";
+    actionBtn.textContent = "＋ Ajouter ce site";
     actionBtn.className = "action-btn add";
     actionBtn.disabled = false;
   }
 
-  // Site list
   siteList.innerHTML = "";
+
   if (allowedSites.length === 0) {
-    siteList.innerHTML = '<li class="empty">Aucun filtre — tous les sites capturés</li>';
+    allHint.style.display = "block";
     return;
   }
+
+  allHint.style.display = "none";
   allowedSites.forEach((site) => {
+    const isActive = site === currentSite;
     const li = document.createElement("li");
     li.className = "site-item";
-    const isActive = site === currentSite;
     li.innerHTML = `
       <span class="dot ${isActive ? "" : "off"}"></span>
       <span title="${site}">${site}</span>
-      <button class="rm" data-site="${site}" title="Supprimer">×</button>
+      <button class="rm" data-site="${site}" title="Retirer">×</button>
     `;
     siteList.appendChild(li);
   });
+
   siteList.querySelectorAll(".rm").forEach((btn) => {
     btn.addEventListener("click", () => removeSite(btn.dataset.site));
   });
@@ -92,15 +92,15 @@ actionBtn.addEventListener("click", () => {
 
 function addSite(site) {
   allowedSites = [...allowedSites, site];
-  saveAndRender();
+  save();
 }
 
 function removeSite(site) {
   allowedSites = allowedSites.filter((s) => s !== site);
-  saveAndRender();
+  save();
 }
 
-function saveAndRender() {
+function save() {
   chrome.runtime.sendMessage(
     { type: "UPDATE_SETTINGS", settings: { allowedSites } },
     () => render()

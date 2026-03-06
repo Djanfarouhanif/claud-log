@@ -7,14 +7,13 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      width: 460px;
+      width: 300px;
       padding: 16px;
       background: #1e1e2e;
       color: #cdd6f4;
     }
     h1 { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: #89b4fa; }
 
-    /* Current site card */
     .site-card {
       background: #313244;
       border-radius: 8px;
@@ -35,7 +34,6 @@
       word-break: break-all;
     }
 
-    /* Big action button */
     .action-btn {
       width: 100%;
       padding: 10px;
@@ -51,15 +49,10 @@
     .action-btn.add:hover { background: #94d4a0; }
     .action-btn.remove { background: #f38ba8; color: #1e1e2e; }
     .action-btn.remove:hover { background: #e07a97; }
+    .action-btn:disabled { background: #45475a; color: #6c7086; cursor: default; }
 
-    /* Divider */
-    .divider {
-      border: none;
-      border-top: 1px solid #313244;
-      margin: 12px 0;
-    }
+    .divider { border: none; border-top: 1px solid #313244; margin: 12px 0; }
 
-    /* Toggle row */
     .row {
       display: flex;
       align-items: center;
@@ -83,7 +76,6 @@
     input:checked + .slider { background: #89b4fa; }
     input:checked + .slider:before { transform: translateX(16px); }
 
-    /* Saved sites list */
     .section-label {
       font-size: 10px;
       text-transform: uppercase;
@@ -91,27 +83,26 @@
       color: #6c7086;
       margin-bottom: 6px;
     }
+    .all-hint {
+      font-size: 11px;
+      background: #313244;
+      color: #6c7086;
+      border-radius: 6px;
+      padding: 6px 10px;
+      margin-bottom: 6px;
+    }
     .site-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
     .site-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: #313244;
-      border-radius: 6px;
-      padding: 5px 8px;
-      font-size: 12px;
+      display: flex; align-items: center; gap: 6px;
+      background: #313244; border-radius: 6px;
+      padding: 5px 8px; font-size: 12px;
     }
-    .dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: #a6e3a1; flex-shrink: 0;
-    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #a6e3a1; flex-shrink: 0; }
     .dot.off { background: #45475a; }
     .site-item span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .rm { background: none; border: none; color: #f38ba8; cursor: pointer; font-size: 15px; padding: 0; }
+    .rm:hover { color: #cdd6f4; }
 
-    .empty { font-size: 11px; color: #585b70; text-align: center; padding: 6px 0; }
-
-    /* Status */
     .status {
       font-size: 11px; padding: 6px 10px;
       border-radius: 6px; background: #313244;
@@ -124,18 +115,15 @@
 <body>
   <h1>Claude Log Bridge</h1>
 
-  <!-- Current site -->
   <div class="site-card">
     <div class="label">Site actuel</div>
     <div class="host" id="currentHost">—</div>
   </div>
 
-  <!-- Main action button (add / remove depending on state) -->
-  <button class="action-btn add" id="actionBtn">＋ Capturer ce site</button>
+  <button class="action-btn add" id="actionBtn">＋ Ajouter ce site</button>
 
   <hr class="divider" />
 
-  <!-- Global toggle -->
   <div class="row">
     <label>Capture active</label>
     <label class="toggle">
@@ -144,8 +132,8 @@
     </label>
   </div>
 
-  <!-- Saved sites -->
-  <div class="section-label">Sites enregistrés</div>
+  <div class="section-label">Sites capturés</div>
+  <div id="allHint" class="all-hint">Aucun site — rien n'est capturé</div>
   <ul class="site-list" id="siteList"></ul>
 
   <div id="serverStatus" class="status">Vérification…</div>
