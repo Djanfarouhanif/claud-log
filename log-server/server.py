@@ -19,7 +19,6 @@ HOST = "127.0.0.1"
 PORT = 8765
 MAX_MEMORY_LOGS = 500
 
-# JSON Lines : une entrée JSON par ligne, append-only → pas de corruption
 LOG_JSONL_FILE = Path("browser_logs.jsonl")
 LOG_TXT_FILE   = Path("../.devtools/browser_logs.txt")
 
@@ -29,7 +28,6 @@ LOG_TXT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 log_store: deque = deque(maxlen=MAX_MEMORY_LOGS)
 
-# Charger l'historique existant au démarrage
 if LOG_JSONL_FILE.exists():
     for raw in LOG_JSONL_FILE.read_text(encoding="utf-8").splitlines():
         raw = raw.strip()
@@ -43,10 +41,12 @@ if LOG_JSONL_FILE.exists():
 
 app = FastAPI(title="Claude Log Bridge", version="1.0.0")
 
+# allow_methods=["*"] is required — listing methods explicitly does NOT make
+# Starlette respond with 200 to OPTIONS preflight for DELETE requests.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
@@ -106,11 +106,9 @@ async def receive_log(entry: LogEntry):
 
     log_store.append(data)
 
-    # Append une seule ligne JSON — atomique, pas de relecture du fichier
     with LOG_JSONL_FILE.open("a", encoding="utf-8") as f:
         f.write(json.dumps(data, ensure_ascii=False) + "\n")
 
-    # Append la ligne lisible pour Claude Code
     with LOG_TXT_FILE.open("a", encoding="utf-8") as f:
         f.write(format_txt_line(data) + "\n")
 

@@ -4,12 +4,17 @@
     if (event.source !== window) return;
     if (!event.data || event.data.__claudeLogBridge !== true) return;
 
-    chrome.runtime.sendMessage({
-      type: "LOG_ENTRY",
-      payload: event.data.payload,
-    });
+    // Guard: extension context may be invalidated after extension reload
+    try {
+      chrome.runtime.sendMessage({
+        type: "LOG_ENTRY",
+        payload: event.data.payload,
+      });
+    } catch (e) {}
   });
 
   // Ask the background to inject injected.js via chrome.scripting (bypasses CSP)
-  chrome.runtime.sendMessage({ type: "INJECT_SCRIPT" });
+  try {
+    chrome.runtime.sendMessage({ type: "INJECT_SCRIPT" });
+  } catch (e) {}
 })();

@@ -5,7 +5,7 @@
  * allowedSites rempli → capture uniquement les sites listés
  */
 
-const SERVER_URL = "http://localhost:8765/log";
+const SERVER_URL = "http://localhost:8765";
 
 let settings = {
   enabled: true,
@@ -16,15 +16,33 @@ chrome.storage.local.get(["settings"], (result) => {
   if (result.settings) settings = { ...settings, ...result.settings };
 });
 
+// ─── Clear logs on every page navigation ─────────────────────────────────────
+// Using the tabs API instead of content script messages avoids the
+// "Extension context invalidated" error that occurs when the extension
+// is reloaded while a page is open.
+
+chrome.tabs.onUpdated.addListener((_tabId, changeInfo) => {
+  // "loading" fires at the very start of a navigation (before content loads)
+  if (changeInfo.status !== "loading") return;
+
+  clearLogs();
+});
+
+function clearLogs() {
+  fetch(`${SERVER_URL}/logs`, { method: "DELETE" })
+    .catch(() => {}); // server may not be running — fail silently
+}
+
+// ─── Messages ─────────────────────────────────────────────────────────────────
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
-  // Inject injected.js into the page via chrome.scripting (bypasses CSP)
   if (message.type === "INJECT_SCRIPT") {
     if (!sender.tab) return;
     chrome.scripting.executeScript({
       target: { tabId: sender.tab.id, allFrames: false },
       files: ["injected.js"],
-      world: "MAIN", // runs in the page's JS context, not the extension's isolated world
+      world: "MAIN",
     }).catch((err) => {
       console.warn("[Claude Log Bridge] executeScript failed:", err.message);
     });
@@ -37,7 +55,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     const payload = message.payload;
     const pageUrl = payload.url || (sender.tab && sender.tab.url) || "";
 
-    // Liste vide = rien n'est autorisé
     const allowed = settings.allowedSites.some((site) => pageUrl.includes(site));
     if (!allowed) return;
 
@@ -65,7 +82,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 async function sendToServer(payload) {
   try {
-    await fetch(SERVER_URL, {
+    await fetch(`${SERVER_URL}/log`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
