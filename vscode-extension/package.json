@@ -1,0 +1,70 @@
+{
+  "name": "claude-log-bridge",
+  "displayName": "Claude Log Bridge",
+  "description": "Display browser console logs captured from the local log server directly inside VS Code.",
+  "version": "1.0.0",
+  "publisher": "claude-log-bridge",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Debuggers", "Other"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeLogBridge.showLogs",
+        "title": "Claude Log Bridge: Show Browser Logs"
+      },
+      {
+        "command": "claudeLogBridge.clearLogs",
+        "title": "Claude Log Bridge: Clear Logs"
+      },
+      {
+        "command": "claudeLogBridge.startWatching",
+        "title": "Claude Log Bridge: Start Live Watch"
+      },
+      {
+        "command": "claudeLogBridge.stopWatching",
+        "title": "Claude Log Bridge: Stop Live Watch"
+      }
+    ],
+    "configuration": {
+      "title": "Claude Log Bridge",
+      "properties": {
+        "claudeLogBridge.serverUrl": {
+          "type": "string",
+          "default": "http://localhost:8765",
+          "description": "URL of the local Claude Log Bridge server."
+        },
+        "claudeLogBridge.pollIntervalMs": {
+          "type": "number",
+          "default": 2000,
+          "description": "How often (ms) to poll the server for new logs when live watch is active."
+        },
+        "claudeLogBridge.logFilePath": {
+          "type": "string",
+          "default": ".devtools/browser_logs.txt",
+          "description": "Path (relative to workspace root) of the plain-text log file written by the server."
+        },
+        "claudeLogBridge.maxDisplayedLogs": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum number of log entries to display in the output channel."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
