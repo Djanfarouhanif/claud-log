@@ -43831,3 +43831,123 @@ Do not enter or paste code that you do not understand.  (https://accounts.google
 }  (http://localhost:4200/visa/ai-je-besoin-de-visa)
 [2026-03-06T21:49:47.051Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
           Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:50:47.093Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:51:17.050Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:51:51.322Z] [WARN ] You must provide an AppConfig within your application!  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.427Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.432Z] [LOG  ] [VISA] Vérification existence _showVisaModal: undefined  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.432Z] [LOG  ] [VISA] _showVisaModal absent, création en cours...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.434Z] [LOG  ] [VISA] Injection du HTML du modal...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.433Z] [LOG  ] [VISA] Injection du style CSS...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.435Z] [LOG  ] [VISA] HTML du modal injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.433Z] [LOG  ] [VISA] Style CSS injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.435Z] [LOG  ] [VISA] _showVisaModal défini avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.435Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.436Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.436Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.436Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.436Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.559Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.561Z] [LOG  ] [VISA] Vérification existence _showVisaModal: function  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.561Z] [LOG  ] [VISA] _showVisaModal déjà défini, on réutilise l'existant  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.561Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.562Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.562Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.562Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:51.562Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:53.440Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:51:53.566Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:52:11.884Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at window.fetch (chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:52:11.892Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:52:24.241Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:52:54.233Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:53:05.285Z] [WARN ] You must provide an AppConfig within your application!  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.398Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.402Z] [LOG  ] [VISA] Vérification existence _showVisaModal: undefined  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.403Z] [LOG  ] [VISA] _showVisaModal absent, création en cours...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.403Z] [LOG  ] [VISA] Injection du style CSS...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.404Z] [LOG  ] [VISA] Style CSS injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.404Z] [LOG  ] [VISA] Injection du HTML du modal...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.404Z] [LOG  ] [VISA] HTML du modal injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.404Z] [LOG  ] [VISA] _showVisaModal défini avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.404Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.405Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.405Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.405Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.405Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.530Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] Vérification existence _showVisaModal: function  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] _showVisaModal déjà défini, on réutilise l'existant  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:05.534Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:07.457Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:07.544Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:26.291Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → Failed to fetch  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          TypeError: Failed to fetch
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:2241:32
+              at proto.<computed> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:851:16)
+              at window.fetch (chrome-extension://bejifghmpokokboollffaigiablakpfj/injected.js:104:30)
+              at _FetchBackend.fetchImpl (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1354:41)
+              at http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:71
+              at _ZoneDelegate.invoke (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:334:158)
+              at ZoneImpl.run (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/zone__js.js?v=7c803932:103:35)
+              at _NgZone.runOutsideAngular (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-6I7A26K4.js?v=7c803932:7640:24)
+              at _FetchBackend.<anonymous> (http://localhost:4200/@fs/C:/Users/ATD/Desktop/workspace/apps/web-v4/.angular/cache/20.3.17/web-v4/vite/deps/chunk-BGRN7FHK.js?v=7c803932:1384:42)
+              at Generator.next (<anonymous>)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 0 Failed to fetch
+[2026-03-06T21:53:26.294Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 0,
+  "statusText": "Unknown Error",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 0 undefined",
+  "error": {}
+}  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-06T21:53:38.276Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:54:08.173Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:54:38.070Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:55:08.478Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
+[2026-03-06T21:55:38.279Z] [NET  ] XHR GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET https://eb01-102-211-168-154.ngrok-free.app/api/v1/dynamics/visa-travel-reasons → 0 
