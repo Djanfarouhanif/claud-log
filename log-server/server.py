@@ -19,7 +19,7 @@ HOST = "127.0.0.1"
 PORT = 8765
 MAX_MEMORY_LOGS = 500
 
-LOG_JSONL_FILE = Path("browser_logs.jsonl")
+LOG_JSONL_FILE = Path("browser_logs.json")
 LOG_TXT_FILE   = Path("../.devtools/browser_logs.txt")
 
 LOG_TXT_FILE.parent.mkdir(parents=True, exist_ok=True)
