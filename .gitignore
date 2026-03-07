@@ -1,2 +1,4 @@
 /log-server/env
+/log-server/browser_logs.json
 /vscode-extension/node_modules
+.devtools/

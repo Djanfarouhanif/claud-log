@@ -21,7 +21,14 @@ HOST = "127.0.0.1"
 PORT = 8765
 MAX_MEMORY_LOGS = 500
 
-LOG_JSONL_FILE = Path("browser_logs.json")
+# Dossier du script — chemins absolus peu importe depuis où on lance
+_SERVER_DIR = Path(__file__).parent.resolve()
+
+LOG_JSONL_FILE = _SERVER_DIR / "browser_logs.json"
+
+# Créer le fichier s'il n'existe pas
+if not LOG_JSONL_FILE.exists():
+    LOG_JSONL_FILE.write_text("", encoding="utf-8")
 
 # Chemin du txt — peut être changé dynamiquement via POST /config
 _project_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(os.environ.get("PROJECT_DIR", ""))
@@ -29,7 +36,8 @@ _project_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(os.environ.get("
 if _project_dir and _project_dir.exists():
     LOG_TXT_FILE = _project_dir / ".devtools" / "browser_logs.txt"
 else:
-    LOG_TXT_FILE = Path("../.devtools/browser_logs.txt")
+    # Fallback absolu : à côté du serveur
+    LOG_TXT_FILE = _SERVER_DIR / ".devtools" / "browser_logs.txt"
 
 LOG_TXT_FILE.parent.mkdir(parents=True, exist_ok=True)
 

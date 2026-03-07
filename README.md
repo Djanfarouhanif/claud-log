@@ -57,6 +57,13 @@ Les fichiers `browser_logs.txt` et `CLAUDE.md` doivent être dans **ton projet**
 
 ---
 
+> **Important — Git :** ajoute `.devtools/` à ton `.gitignore`. Ce dossier contient des logs générés automatiquement qui ne doivent pas être commités.
+> ```bash
+> echo ".devtools/" >> .gitignore
+> ```
+
+---
+
 #### Méthode A — Via l'extension VS Code (automatique)
 
 Ouvre ton projet dans VS Code. L'extension crée automatiquement les fichiers au démarrage :

@@ -83,6 +83,18 @@ function initWorkspaceFiles() {
         fs.writeFileSync(claudeFile, CLAUDE_MD_CONTENT, "utf-8");
         vscode.window.showInformationMessage("Claude Log Bridge: fichiers .devtools/ créés dans votre projet.");
     }
+    // Ajouter .devtools/ au .gitignore du projet s'il n'y est pas
+    const gitignore = path.join(root, ".gitignore");
+    const entry = ".devtools/";
+    if (fs.existsSync(gitignore)) {
+        const content = fs.readFileSync(gitignore, "utf-8");
+        if (!content.includes(entry)) {
+            fs.appendFileSync(gitignore, `\n${entry}\n`, "utf-8");
+        }
+    }
+    else {
+        fs.writeFileSync(gitignore, `${entry}\n`, "utf-8");
+    }
     // Informer le serveur du chemin du workspace
     // Le serveur redirigera ses écritures vers ce dossier
     const config = getConfig();
