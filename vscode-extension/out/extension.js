@@ -53,7 +53,7 @@ function activate(context) {
     statusBarItem.tooltip = "Claude Log Bridge — click to show browser logs";
     statusBarItem.show();
     context.subscriptions.push(vscode.commands.registerCommand("claudeLogBridge.showLogs", cmdShowLogs), vscode.commands.registerCommand("claudeLogBridge.clearLogs", cmdClearLogs), vscode.commands.registerCommand("claudeLogBridge.startWatching", cmdStartWatching), vscode.commands.registerCommand("claudeLogBridge.stopWatching", cmdStopWatching), outputChannel, statusBarItem);
-    // Créer .devtools/browser_logs.txt et CLAUDE.md dans le workspace
+    // Créer les fichiers localement ET informer le serveur du workspace
     initWorkspaceFiles();
     // Auto-start watching on activation
     startWatching();
@@ -83,6 +83,11 @@ function initWorkspaceFiles() {
         fs.writeFileSync(claudeFile, CLAUDE_MD_CONTENT, "utf-8");
         vscode.window.showInformationMessage("Claude Log Bridge: fichiers .devtools/ créés dans votre projet.");
     }
+    // Informer le serveur du chemin du workspace
+    // Le serveur redirigera ses écritures vers ce dossier
+    const config = getConfig();
+    httpRequest("POST", `${config.serverUrl}/config`, JSON.stringify({ projectDir: root }))
+        .catch(() => { }); // serveur pas encore démarré — silencieux
 }
 const CLAUDE_MD_CONTENT = `# Browser Log Feed for Claude Code
 

@@ -3,6 +3,8 @@ Claude Log Bridge - Local Log Server
 """
 
 import json
+import os
+import sys
 from collections import deque
 from datetime import datetime
 from pathlib import Path
@@ -15,59 +17,21 @@ from pydantic import BaseModel
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
-import os
-import sys
-
 HOST = "127.0.0.1"
 PORT = 8765
 MAX_MEMORY_LOGS = 500
 
 LOG_JSONL_FILE = Path("browser_logs.json")
 
-# Le dossier cible peut être passé en argument ou via variable d'environnement.
-# Exemples :
-#   python server.py C:/projets/mon-app
-#   set PROJECT_DIR=C:/projets/mon-app && python server.py
+# Chemin du txt — peut être changé dynamiquement via POST /config
 _project_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(os.environ.get("PROJECT_DIR", ""))
 
 if _project_dir and _project_dir.exists():
-    LOG_TXT_FILE  = _project_dir / ".devtools" / "browser_logs.txt"
-    _CLAUDE_FILE  = _project_dir / ".devtools" / "CLAUDE.md"
+    LOG_TXT_FILE = _project_dir / ".devtools" / "browser_logs.txt"
 else:
-    # Fallback : écrire à côté du serveur
-    LOG_TXT_FILE  = Path("../.devtools/browser_logs.txt")
-    _CLAUDE_FILE  = Path("../.devtools/CLAUDE.md")
+    LOG_TXT_FILE = Path("../.devtools/browser_logs.txt")
 
 LOG_TXT_FILE.parent.mkdir(parents=True, exist_ok=True)
-
-# Créer CLAUDE.md dans le projet cible s'il n'existe pas
-if not _CLAUDE_FILE.exists():
-    _CLAUDE_FILE.write_text(
-        "# Browser Log Feed for Claude Code\n\n"
-        "When the developer asks you to debug a browser error, read the log file below\n"
-        "before responding. It contains real-time output captured from the browser console.\n\n"
-        "## Log File\n\n"
-        ".devtools/browser_logs.txt\n\n"
-        "## Log Format\n\n"
-        "[ISO-TIMESTAMP] [TYPE ] message  (page url)\n"
-        "          optional stack trace\n"
-        "          Network: METHOD url → STATUS statusText\n\n"
-        "## Types\n\n"
-        "- LOG   — console.log\n"
-        "- WARN  — console.warn\n"
-        "- ERROR — console.error / window.onerror\n"
-        "- INFO  — console.info\n"
-        "- DEBUG — console.debug\n"
-        "- NET   — failed fetch / XHR\n"
-        "- REJCT — unhandled promise rejection\n\n"
-        "## How to Use\n\n"
-        "When the developer asks 'why is this failing?' or 'what does the error say?':\n"
-        "1. Read .devtools/browser_logs.txt\n"
-        "2. Find the most recent ERROR or REJCT entries\n"
-        "3. Use the stack traces and network details to pinpoint the root cause\n"
-        "4. Suggest targeted fixes based on the actual captured logs\n",
-        encoding="utf-8"
-    )
 
 # ─── In-memory store ──────────────────────────────────────────────────────────
 
@@ -86,8 +50,6 @@ if LOG_JSONL_FILE.exists():
 
 app = FastAPI(title="Claude Log Bridge", version="1.0.0")
 
-# allow_methods=["*"] is required — listing methods explicitly does NOT make
-# Starlette respond with 200 to OPTIONS preflight for DELETE requests.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -95,7 +57,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ─── Model ────────────────────────────────────────────────────────────────────
+# ─── Models ───────────────────────────────────────────────────────────────────
 
 class LogEntry(BaseModel):
     type: str
@@ -113,6 +75,9 @@ class LogEntry(BaseModel):
     class Config:
         extra = "allow"
 
+class ConfigPayload(BaseModel):
+    projectDir: str
+
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
 TYPE_ICONS = {
@@ -120,6 +85,49 @@ TYPE_ICONS = {
     "log": "LOG  ", "info": "INFO ", "debug": "DEBUG",
     "network_error": "NET  ", "unhandledrejection": "REJCT",
 }
+
+CLAUDE_MD = (
+    "# Browser Log Feed for Claude Code\n\n"
+    "When the developer asks you to debug a browser error, read the log file below\n"
+    "before responding. It contains real-time output captured from the browser console.\n\n"
+    "## Log File\n\n"
+    ".devtools/browser_logs.txt\n\n"
+    "## Log Format\n\n"
+    "[ISO-TIMESTAMP] [TYPE ] message  (page url)\n"
+    "          optional stack trace\n"
+    "          Network: METHOD url → STATUS statusText\n\n"
+    "## Types\n\n"
+    "- LOG   — console.log\n"
+    "- WARN  — console.warn\n"
+    "- ERROR — console.error / window.onerror\n"
+    "- INFO  — console.info\n"
+    "- DEBUG — console.debug\n"
+    "- NET   — failed fetch / XHR\n"
+    "- REJCT — unhandled promise rejection\n\n"
+    "## How to Use\n\n"
+    "When the developer asks 'why is this failing?' or 'what does the error say?':\n"
+    "1. Read .devtools/browser_logs.txt\n"
+    "2. Find the most recent ERROR or REJCT entries\n"
+    "3. Use the stack traces and network details to pinpoint the root cause\n"
+    "4. Suggest targeted fixes based on the actual captured logs\n"
+)
+
+def set_project_dir(directory: Path):
+    global LOG_TXT_FILE
+    devtools = directory / ".devtools"
+    devtools.mkdir(parents=True, exist_ok=True)
+    LOG_TXT_FILE = devtools / "browser_logs.txt"
+    if not LOG_TXT_FILE.exists():
+        LOG_TXT_FILE.write_text("", encoding="utf-8")
+    claude_md = devtools / "CLAUDE.md"
+    if not claude_md.exists():
+        claude_md.write_text(CLAUDE_MD, encoding="utf-8")
+    print(f"  [CONFIG] Project dir set → {directory}", flush=True)
+    print(f"  [CONFIG] TXT log → {LOG_TXT_FILE}", flush=True)
+
+# Appliquer le dossier initial si fourni
+if _project_dir and _project_dir.exists():
+    set_project_dir(_project_dir)
 
 def format_txt_line(entry: dict) -> str:
     ts   = entry.get("timestamp", datetime.utcnow().isoformat())
@@ -140,7 +148,17 @@ def format_txt_line(entry: dict) -> str:
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "log_count": len(log_store)}
+    return {"status": "ok", "log_count": len(log_store), "txt_file": str(LOG_TXT_FILE.resolve())}
+
+
+@app.post("/config")
+async def set_config(payload: ConfigPayload):
+    """L'extension VS Code envoie le chemin du workspace ouvert."""
+    directory = Path(payload.projectDir)
+    if not directory.exists():
+        return {"ok": False, "error": f"Directory not found: {directory}"}
+    set_project_dir(directory)
+    return {"ok": True, "txtFile": str(LOG_TXT_FILE.resolve())}
 
 
 @app.post("/log")
