@@ -47,61 +47,29 @@ Recharge VS Code après l'installation :
 Ctrl+Shift+P → Developer: Reload Window
 ```
 
+> L'extension crée automatiquement `.devtools/browser_logs.txt`, `.devtools/CLAUDE.md` et ajoute `.devtools/` au `.gitignore` dans chaque projet que tu ouvres dans VS Code.
+
 ---
 
 ## Utilisation quotidienne
 
-### Étape 1 — Créer les fichiers `.devtools/` dans ton projet
-
-Les fichiers `browser_logs.txt` et `CLAUDE.md` doivent être dans **ton projet**, pas dans le dossier `claude-log/`. Il y a deux façons de les créer :
-
----
-
-> **Important — Git :** ajoute `.devtools/` à ton `.gitignore`. Ce dossier contient des logs générés automatiquement qui ne doivent pas être commités.
-> ```bash
-> echo ".devtools/" >> .gitignore
-> ```
-
----
-
-#### Méthode A — Via l'extension VS Code (automatique)
-
-Ouvre ton projet dans VS Code. L'extension crée automatiquement les fichiers au démarrage :
-
-```
-ton-projet/
-└── .devtools/
-    ├── browser_logs.txt   ← créé vide
-    └── CLAUDE.md          ← créé avec les instructions pour Claude Code
-```
-
-Une notification apparaît : *"Claude Log Bridge: fichiers .devtools/ créés dans votre projet."*
-
-> C'est la méthode recommandée — rien à faire manuellement.
-
----
-
-#### Méthode B — Via le serveur Python (en passant le chemin)
-
-Lance le serveur en lui indiquant le dossier de ton projet :
+### Étape 1 — Démarrer le serveur
 
 ```bash
 cd log-server
-python server.py C:\chemin\vers\ton-projet
+python server.py
 ```
 
-**Exemple :**
-```bash
-python server.py C:\projets\mon-app-angular
+Tu dois voir :
+```
+Claude Log Bridge server  →  http://127.0.0.1:8765
+  JSONL : C:\...\log-server\browser_logs.json
+  TXT   : C:\...\log-server\.devtools\browser_logs.txt
 ```
 
-Le serveur crée les mêmes fichiers dans ton projet au démarrage.
+Quand tu ouvres ton projet dans VS Code, l'extension envoie automatiquement le chemin du workspace au serveur. Le serveur redirige alors ses écritures vers `ton-projet/.devtools/browser_logs.txt`.
 
-> Utile si tu veux créer les fichiers avant même d'ouvrir VS Code.
-
----
-
-> Laisse le terminal du serveur ouvert pendant toute ta session de travail.
+> Laisse ce terminal ouvert pendant toute ta session de travail.
 
 ---
 
@@ -111,9 +79,10 @@ Le serveur crée les mêmes fichiers dans ton projet au démarrage.
 2. Clique sur l'icône **Claude Log Bridge** dans la barre d'outils Chrome
 3. Clique **＋ Ajouter ce site**
 
-Le site apparaît dans la liste "Sites capturés". Les logs vont maintenant être envoyés automatiquement au serveur.
+Le site apparaît dans la liste "Sites capturés". Les logs sont maintenant envoyés automatiquement au serveur.
 
-> Si tu ne vois pas l'extension dans la barre, clique sur 🧩 et épingle-la.
+> - Si aucun site n'est ajouté → rien n'est capturé
+> - Si tu ne vois pas l'extension dans la barre, clique sur 🧩 et épingle-la
 
 ---
 
@@ -124,7 +93,7 @@ Utilise ton application normalement. À chaque chargement de page :
 - Les anciens logs sont **automatiquement effacés**
 - Les nouveaux logs arrivent en temps réel dans :
   - `log-server/browser_logs.json` — historique complet
-  - `.devtools/browser_logs.txt` — format lisible par Claude Code
+  - `ton-projet/.devtools/browser_logs.txt` — format lisible par Claude Code
 
 Ce qui est capturé automatiquement :
 - `console.log`, `console.warn`, `console.error`, `console.info`, `console.debug`
@@ -136,9 +105,9 @@ Ce qui est capturé automatiquement :
 
 ### Étape 4 — Voir les logs dans VS Code
 
-**Option A — Panneau dédié**
+**Option A — Icône dans la barre d'activité**
 
-Clique sur l'icône **Claude Log Bridge** dans la barre d'activité à gauche de VS Code (icône navigateur).
+Clique sur l'icône **Claude Log Bridge** dans la barre d'activité à gauche de VS Code.
 
 **Option B — Palette de commandes**
 
@@ -156,28 +125,34 @@ Quand une erreur apparaît dans le navigateur, dis simplement à Claude Code :
 
 > "Regarde les logs et dis-moi ce qui ne va pas"
 
-Claude Code lit automatiquement `.devtools/browser_logs.txt` et te donne un diagnostic basé sur les vraies erreurs capturées.
+Claude Code lit automatiquement `.devtools/browser_logs.txt` grâce au fichier `.devtools/CLAUDE.md` présent dans ton projet, et te donne un diagnostic basé sur les vraies erreurs capturées.
 
 ---
 
 ## Résumé du workflow
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│  1. python server.py          → démarrer le serveur     │
-│                                                         │
-│  2. Ouvrir Chrome + ton app                             │
-│     + cliquer "Ajouter ce site" (une fois par site)     │
-│                                                         │
-│  3. Coder / tester normalement                          │
-│     → les logs arrivent automatiquement                 │
-│                                                         │
-│  4. Erreur ?                                            │
-│     → dire à Claude Code "regarde les logs"             │
-│     → Claude analyse et propose un fix                  │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│  INSTALLATION (une seule fois)                              │
+│  1. pip install -r requirements.txt                         │
+│  2. Charger browser-extension/ dans Chrome                  │
+│  3. code --install-extension claude-log-bridge-1.0.0.vsix   │
+│                                                             │
+│  CHAQUE SESSION                                             │
+│  1. python server.py          → démarrer le serveur         │
+│  2. Ouvrir ton projet dans VS Code                          │
+│     → .devtools/ créé automatiquement                       │
+│     → serveur informé du chemin du projet                   │
+│  3. Ouvrir Chrome + ton app                                 │
+│     → cliquer "Ajouter ce site" (une fois par site)         │
+│  4. Coder / tester normalement                              │
+│     → les logs arrivent automatiquement                     │
+│  5. Erreur ?                                                │
+│     → dire à Claude Code "regarde les logs"                 │
+│     → Claude analyse et propose un fix                      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -188,26 +163,41 @@ Claude Code lit automatiquement `.devtools/browser_logs.txt` et te donne un diag
 claude-log/
 ├── browser-extension/        ← extension Chrome/Edge
 │   ├── manifest.json
-│   ├── background.js         ← service worker
+│   ├── background.js         ← service worker, envoie les logs au serveur
 │   ├── content.js            ← injecté dans chaque page
-│   ├── injected.js           ← intercepte console + fetch
-│   ├── popup.html / popup.js ← interface du bouton
+│   ├── injected.js           ← intercepte console + fetch + XHR
+│   ├── popup.html / popup.js ← interface (ajouter/retirer un site)
 │   └── icons/
 │
 ├── log-server/               ← serveur Python local
-│   ├── server.py
+│   ├── server.py             ← reçoit et stocke les logs
 │   ├── requirements.txt
-│   └── browser_logs.json     ← logs enregistrés
+│   └── browser_logs.json     ← historique complet des logs
 │
 ├── vscode-extension/         ← extension VS Code
 │   ├── package.json
 │   ├── tsconfig.json
-│   └── src/extension.ts
+│   └── src/extension.ts      ← affiche les logs, crée .devtools/
 │
-└── .devtools/
-    ├── browser_logs.txt      ← fichier lu par Claude Code
-    └── CLAUDE.md             ← instructions pour Claude Code
+└── (dans ton projet)
+    └── .devtools/            ← créé automatiquement par l'extension VS Code
+        ├── browser_logs.txt  ← logs en temps réel, lu par Claude Code
+        └── CLAUDE.md         ← instructions pour Claude Code
 ```
+
+---
+
+## Ce que fait chaque composant
+
+| Composant | Rôle |
+|-----------|------|
+| `injected.js` | Intercepte `console`, `fetch`, `XHR` dans la page |
+| `content.js` | Injecte le script dans la page, relaie les messages |
+| `background.js` | Filtre par site, POST vers le serveur, efface au chargement |
+| `server.py` | Reçoit les logs, écrit dans `.json` et `.txt` |
+| `extension.ts` | Affiche les logs dans VS Code, crée `.devtools/`, informe le serveur |
+| `browser_logs.txt` | Fichier lu par Claude Code pour analyser les erreurs |
+| `CLAUDE.md` | Dit à Claude Code où et comment lire les logs |
 
 ---
 
@@ -224,10 +214,14 @@ claude-log/
 
 ## Dépannage
 
-**Les logs n'arrivent pas dans le JSON**
+**Les logs n'arrivent pas**
 - Vérifie que le serveur tourne (`python server.py`)
-- Vérifie que le site est bien ajouté dans le popup de l'extension
-- Ouvre la console DevTools de ta page et cherche : `[Claude Log Bridge] Console capture active`
+- Vérifie que le site est ajouté dans le popup Chrome (liste "Sites capturés")
+- Ouvre les DevTools de ta page → cherche : `[Claude Log Bridge] Console capture active`
+
+**`browser_logs.txt` reste vide**
+- Le serveur écrit dans le projet ouvert dans VS Code — vérifie que VS Code a bien ouvert le bon dossier
+- Regarde les logs du serveur dans le terminal pour voir le chemin exact utilisé
 
 **L'icône Chrome n'apparaît pas**
 - Va sur `chrome://extensions` → clique ↺ pour recharger l'extension
@@ -238,5 +232,5 @@ claude-log/
 - Lance : `Ctrl+Shift+P → Claude Log Bridge: Start Live Watch`
 
 **Erreur CORS**
-- Le serveur doit être démarré avec `python server.py` (pas avec un autre runner)
-- Vérifie que l'URL du serveur dans les settings VS Code est bien `http://localhost:8765`
+- Le serveur doit être démarré avec `python server.py`
+- Vérifie que l'URL dans les settings VS Code est bien `http://localhost:8765`
