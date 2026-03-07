@@ -48,6 +48,9 @@ export function activate(context: vscode.ExtensionContext) {
     statusBarItem
   );
 
+  // Créer .devtools/browser_logs.txt et CLAUDE.md dans le workspace
+  initWorkspaceFiles();
+
   // Auto-start watching on activation
   startWatching();
 }
@@ -55,6 +58,70 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() {
   stopWatching();
 }
+
+// ─── Workspace file init ──────────────────────────────────────────────────────
+
+function initWorkspaceFiles() {
+  const folders = vscode.workspace.workspaceFolders;
+  if (!folders || folders.length === 0) return;
+
+  const root = folders[0].uri.fsPath;
+  const devtoolsDir = path.join(root, ".devtools");
+
+  // Créer le dossier .devtools s'il n'existe pas
+  if (!fs.existsSync(devtoolsDir)) {
+    fs.mkdirSync(devtoolsDir, { recursive: true });
+  }
+
+  // Créer browser_logs.txt vide s'il n'existe pas
+  const logsFile = path.join(devtoolsDir, "browser_logs.txt");
+  if (!fs.existsSync(logsFile)) {
+    fs.writeFileSync(logsFile, "", "utf-8");
+  }
+
+  // Créer CLAUDE.md s'il n'existe pas
+  const claudeFile = path.join(devtoolsDir, "CLAUDE.md");
+  if (!fs.existsSync(claudeFile)) {
+    fs.writeFileSync(claudeFile, CLAUDE_MD_CONTENT, "utf-8");
+    vscode.window.showInformationMessage(
+      "Claude Log Bridge: fichiers .devtools/ créés dans votre projet."
+    );
+  }
+}
+
+const CLAUDE_MD_CONTENT = `# Browser Log Feed for Claude Code
+
+When the developer asks you to debug a browser error, read the log file below
+before responding. It contains real-time output captured from the browser console.
+
+## Log File
+
+.devtools/browser_logs.txt
+
+## Log Format
+
+[ISO-TIMESTAMP] [TYPE ] message  (page url)
+          optional stack trace
+          Network: METHOD url → STATUS statusText
+
+## Types
+
+- LOG   — console.log
+- WARN  — console.warn
+- ERROR — console.error / window.onerror
+- INFO  — console.info
+- DEBUG — console.debug
+- NET   — failed fetch / XHR request
+- REJCT — unhandled promise rejection
+
+## How to Use
+
+When the developer asks "why is this failing?" or "what does the error say?":
+1. Read .devtools/browser_logs.txt
+2. Find the most recent ERROR or REJCT entries
+3. Use the stack traces and network details to pinpoint the root cause
+4. Suggest targeted fixes based on the actual captured logs
+`;
 
 // ─── Commands ─────────────────────────────────────────────────────────────────
 
@@ -118,7 +185,6 @@ async function pollNewLogs() {
     const parsed = JSON.parse(body) as { logs: LogEntry[]; total: number };
     const entries = parsed.logs;
 
-    // Only display entries newer than the last one we showed
     const newEntries = lastSeenTimestamp
       ? entries.filter((e) => (e.timestamp ?? "") > lastSeenTimestamp!)
       : entries;
@@ -128,7 +194,6 @@ async function pollNewLogs() {
       lastSeenTimestamp = newEntries[newEntries.length - 1].timestamp ?? null;
       updateStatusBar(parsed.total);
 
-      // Flash the status bar item to signal new activity
       statusBarItem.text = "$(browser) Logs $(bell)";
       setTimeout(() => {
         statusBarItem.text = watchTimer ? "$(browser) Logs $(sync~spin)" : "$(browser) Logs";
@@ -155,7 +220,7 @@ async function fetchAndDisplay() {
     updateStatusBar(parsed.total);
   } catch {
     outputChannel.appendLine("[Claude Log Bridge] ERROR: Cannot reach server at " + config.serverUrl);
-    outputChannel.appendLine("  Make sure to run:  cd log-server && python server.py");
+    outputChannel.appendLine("  Make sure to run:  cd log-server && python server.py <path-to-your-project>");
   }
 }
 
@@ -180,10 +245,7 @@ function appendEntry(entry: LogEntry) {
   outputChannel.appendLine(`${icon} ${ts}  ${entry.message}${origin}`);
 
   if (entry.stack) {
-    entry.stack
-      .trim()
-      .split("\n")
-      .forEach((l) => outputChannel.appendLine("    " + l));
+    entry.stack.trim().split("\n").forEach((l) => outputChannel.appendLine("    " + l));
   }
   if (entry.network) {
     const n = entry.network;

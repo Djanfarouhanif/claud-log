@@ -51,23 +51,50 @@ Ctrl+Shift+P → Developer: Reload Window
 
 ## Utilisation quotidienne
 
-### Étape 1 — Démarrer le serveur
+### Étape 1 — Créer les fichiers `.devtools/` dans ton projet
 
-Ouvre un terminal et lance :
+Les fichiers `browser_logs.txt` et `CLAUDE.md` doivent être dans **ton projet**, pas dans le dossier `claude-log/`. Il y a deux façons de les créer :
+
+---
+
+#### Méthode A — Via l'extension VS Code (automatique)
+
+Ouvre ton projet dans VS Code. L'extension crée automatiquement les fichiers au démarrage :
+
+```
+ton-projet/
+└── .devtools/
+    ├── browser_logs.txt   ← créé vide
+    └── CLAUDE.md          ← créé avec les instructions pour Claude Code
+```
+
+Une notification apparaît : *"Claude Log Bridge: fichiers .devtools/ créés dans votre projet."*
+
+> C'est la méthode recommandée — rien à faire manuellement.
+
+---
+
+#### Méthode B — Via le serveur Python (en passant le chemin)
+
+Lance le serveur en lui indiquant le dossier de ton projet :
 
 ```bash
 cd log-server
-python server.py
+python server.py C:\chemin\vers\ton-projet
 ```
 
-Tu dois voir :
-```
-Claude Log Bridge server  →  http://127.0.0.1:8765
-  JSONL : browser_logs.json
-  TXT   : .devtools/browser_logs.txt
+**Exemple :**
+```bash
+python server.py C:\projets\mon-app-angular
 ```
 
-> Laisse ce terminal ouvert pendant toute ta session de travail.
+Le serveur crée les mêmes fichiers dans ton projet au démarrage.
+
+> Utile si tu veux créer les fichiers avant même d'ouvrir VS Code.
+
+---
+
+> Laisse le terminal du serveur ouvert pendant toute ta session de travail.
 
 ---
 

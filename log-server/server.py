@@ -15,14 +15,59 @@ from pydantic import BaseModel
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
+import os
+import sys
+
 HOST = "127.0.0.1"
 PORT = 8765
 MAX_MEMORY_LOGS = 500
 
 LOG_JSONL_FILE = Path("browser_logs.json")
-LOG_TXT_FILE   = Path("../.devtools/browser_logs.txt")
+
+# Le dossier cible peut être passé en argument ou via variable d'environnement.
+# Exemples :
+#   python server.py C:/projets/mon-app
+#   set PROJECT_DIR=C:/projets/mon-app && python server.py
+_project_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(os.environ.get("PROJECT_DIR", ""))
+
+if _project_dir and _project_dir.exists():
+    LOG_TXT_FILE  = _project_dir / ".devtools" / "browser_logs.txt"
+    _CLAUDE_FILE  = _project_dir / ".devtools" / "CLAUDE.md"
+else:
+    # Fallback : écrire à côté du serveur
+    LOG_TXT_FILE  = Path("../.devtools/browser_logs.txt")
+    _CLAUDE_FILE  = Path("../.devtools/CLAUDE.md")
 
 LOG_TXT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+# Créer CLAUDE.md dans le projet cible s'il n'existe pas
+if not _CLAUDE_FILE.exists():
+    _CLAUDE_FILE.write_text(
+        "# Browser Log Feed for Claude Code\n\n"
+        "When the developer asks you to debug a browser error, read the log file below\n"
+        "before responding. It contains real-time output captured from the browser console.\n\n"
+        "## Log File\n\n"
+        ".devtools/browser_logs.txt\n\n"
+        "## Log Format\n\n"
+        "[ISO-TIMESTAMP] [TYPE ] message  (page url)\n"
+        "          optional stack trace\n"
+        "          Network: METHOD url → STATUS statusText\n\n"
+        "## Types\n\n"
+        "- LOG   — console.log\n"
+        "- WARN  — console.warn\n"
+        "- ERROR — console.error / window.onerror\n"
+        "- INFO  — console.info\n"
+        "- DEBUG — console.debug\n"
+        "- NET   — failed fetch / XHR\n"
+        "- REJCT — unhandled promise rejection\n\n"
+        "## How to Use\n\n"
+        "When the developer asks 'why is this failing?' or 'what does the error say?':\n"
+        "1. Read .devtools/browser_logs.txt\n"
+        "2. Find the most recent ERROR or REJCT entries\n"
+        "3. Use the stack traces and network details to pinpoint the root cause\n"
+        "4. Suggest targeted fixes based on the actual captured logs\n",
+        encoding="utf-8"
+    )
 
 # ─── In-memory store ──────────────────────────────────────────────────────────
 

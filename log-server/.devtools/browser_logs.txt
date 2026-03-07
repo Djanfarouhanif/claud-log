@@ -1,0 +1,51 @@
+[2026-03-07T12:30:24.222Z] [WARN ] You must provide an AppConfig within your application!  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.305Z] [NET  ] fetch GET http://192.168.200.161:4001/api/v1/users/me → 401 Unauthorized  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+          Network: GET http://192.168.200.161:4001/api/v1/users/me → 401 Unauthorized
+[2026-03-07T12:30:24.320Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.324Z] [LOG  ] [VISA] Vérification existence _showVisaModal: undefined  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.325Z] [LOG  ] [VISA] _showVisaModal absent, création en cours...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.325Z] [LOG  ] [VISA] Injection du style CSS...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.326Z] [LOG  ] [VISA] Style CSS injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.326Z] [LOG  ] [VISA] Injection du HTML du modal...  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.326Z] [LOG  ] [VISA] HTML du modal injecté avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.327Z] [LOG  ] [VISA] _showVisaModal défini avec succès  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.328Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.328Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.328Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.328Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.328Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.366Z] [ERROR] Erreur lors du chargement du profil utilisateur {
+  "headers": {
+    "headers": {},
+    "normalizedNames": {},
+    "lazyUpdate": null
+  },
+  "status": 401,
+  "statusText": "Unauthorized",
+  "url": "http://192.168.200.161:4001/api/v1/users/me",
+  "ok": false,
+  "redirected": false,
+  "name": "HttpErrorResponse",
+  "message": "Http failure response for http://192.168.200.161:4001/api/v1/users/me: 401 Unauthorized",
+  "error": {
+    "status": "fail",
+    "errors": [
+      {
+        "code": 401002,
+        "clean_message": "Token invalide",
+        "message": "Le token fourni est invalide ou a été altéré."
+      }
+    ],
+    "url": "/api/v1/users/me"
+  }
+}  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.549Z] [LOG  ] DUREE: reel= 0 backend= 0  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.586Z] [LOG  ] [VISA] Vérification existence _showVisaModal: function  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.588Z] [LOG  ] [VISA] _showVisaModal déjà défini, on réutilise l'existant  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.588Z] [LOG  ] [VISA] ── Début logique principale ──  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.588Z] [LOG  ] [VISA] q1 (lettreInvitation):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.589Z] [LOG  ] [VISA] q2 (carteIdentite):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.589Z] [LOG  ] [VISA] q3 (carteSejour):   (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:24.590Z] [LOG  ] [VISA] q1 vide ou null, arrêt de la logique  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:26.325Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
+[2026-03-07T12:30:26.553Z] [LOG  ] API DOWN: injection des motifs de voyage par défaut  (http://localhost:4200/visa/ai-je-besoin-de-visa)
