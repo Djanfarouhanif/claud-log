@@ -16,21 +16,56 @@
     "commands": [
       {
         "command": "claudeLogBridge.showLogs",
-        "title": "Claude Log Bridge: Show Browser Logs"
+        "title": "Voir les logs",
+        "icon": "$(browser)"
       },
       {
         "command": "claudeLogBridge.clearLogs",
-        "title": "Claude Log Bridge: Clear Logs"
+        "title": "Effacer les logs",
+        "icon": "$(trash)"
       },
       {
         "command": "claudeLogBridge.startWatching",
-        "title": "Claude Log Bridge: Start Live Watch"
+        "title": "Démarrer le suivi",
+        "icon": "$(play)"
       },
       {
         "command": "claudeLogBridge.stopWatching",
-        "title": "Claude Log Bridge: Stop Live Watch"
+        "title": "Arrêter le suivi",
+        "icon": "$(stop)"
       }
     ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "claudeLogBridge",
+          "title": "Claude Log Bridge",
+          "icon": "$(browser)"
+        }
+      ]
+    },
+    "views": {
+      "claudeLogBridge": [
+        {
+          "id": "claudeLogBridge.logsView",
+          "name": "Browser Logs"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "claudeLogBridge.showLogs",
+          "when": "view == claudeLogBridge.logsView",
+          "group": "navigation"
+        },
+        {
+          "command": "claudeLogBridge.clearLogs",
+          "when": "view == claudeLogBridge.logsView",
+          "group": "navigation"
+        }
+      ]
+    },
     "configuration": {
       "title": "Claude Log Bridge",
       "properties": {
